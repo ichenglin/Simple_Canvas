@@ -1,0 +1,28 @@
+{
+  "name": "simple-canvas",
+  "version": "1.0.0",
+  "description": "simple canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichenglin/Simple_Canvas.git"
+  },
+  "keywords": [
+    "canvas"
+  ],
+  "author": "Icheng Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ichenglin/Simple_Canvas/issues"
+  },
+  "homepage": "https://github.com/ichenglin/Simple_Canvas#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.6"
+  }
+}
