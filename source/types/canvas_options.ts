@@ -1,6 +1,7 @@
 // types
 export enum SimpleOptions {
     RECTANGLE = "rectangle",
+    POLYGON    = "polygon",
     DIMENSION = "dimension"
 }
 
@@ -12,9 +13,23 @@ export enum SimpleOptions {
  * @param height (optional) the height of rectangle (in configured units)
  */
 export interface SimpleRectangleOptions {
-    type?:   "solid" | "stroke" | "clear",
-    width?:  number,
-    height?: number
+    type?:         "solid" | "stroke" | "clear",
+    width?:        number,
+    height?:       number
+}
+
+/**
+ * Configures the type of polygon to draw on canvas
+ * @param type   (optional) the type of polygon
+ * @param sides  (optional) the sides of polygon
+ * @param radius (optional) the radius of polygon anchor points
+ * @param rotate (optional) the rotation of polygon in degrees
+ */
+export interface SimplePolygonOptions {
+    type?:   "solid" | "stroke",
+    sides?:  number,
+    radius?: number,
+    rotate?: number
 }
 
 /**
@@ -25,8 +40,8 @@ export interface SimpleRectangleOptions {
  * @param units_height  (optional) split height into units
  */
 export interface SimpleDimensionOptions {
-    pixels_width?: number,
+    pixels_width?:  number,
     pixels_height?: number,
-    units_width?: number,
-    units_height?: number
+    units_width?:   number,
+    units_height?:  number
 }

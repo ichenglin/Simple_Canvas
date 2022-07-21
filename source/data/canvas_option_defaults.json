@@ -4,6 +4,12 @@
         "width":  10,
         "height": 10
     },
+    "polygon": {
+        "type":   "solid",
+        "sides":  5,
+        "radius": 10,
+        "rotate": 0
+    },
     "dimension": {
         "pixels_width": 300,
         "pixels_height": 300,
