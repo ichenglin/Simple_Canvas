@@ -1,7 +1,7 @@
 import { SimpleDimensionOptions, SimpleRectangleOptions } from "../types/canvas_options";
 import SimpleLocation from "./simple_location";
-import configurable_options from "../system/configurable_options.js";
-import { transform_dimension } from "../system/transform_dimension.js";
+import configurable_options from "../system/configurable_options";
+import { transform_dimension } from "../system/transform_dimension";
 
 /**
  * The main object in SimpleCanvas package, controls canvas element.
@@ -51,6 +51,13 @@ export default class SimpleCanvas {
         const width_on_canvas = transform_dimension(shape_configuration.width as number, "width", this.canvas_dimension);
         const height_on_canvas = transform_dimension(shape_configuration.height as number, "height", this.canvas_dimension);
         rectangle_function(location_on_canvas.get_x(), location_on_canvas.get_y(), width_on_canvas, height_on_canvas);
+    }
+
+    /**
+     * Clears the whole canvas
+     */
+    public clear_canvas(): void {
+        this.canvas_context.clearRect(0, 0, this.canvas_element.width, this.canvas_element.height);
     }
 
     /**

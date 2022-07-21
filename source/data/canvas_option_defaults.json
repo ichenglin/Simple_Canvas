@@ -1,4 +1,4 @@
-export const canvas_option_defaults = {
+{
     "rectangle": {
         "type":   "solid",
         "width":  10,
@@ -10,4 +10,4 @@ export const canvas_option_defaults = {
         "units_width": 100,
         "units_height": 100
     }
-};
+}

@@ -1,5 +1,5 @@
 import { SimpleOptions } from "../types/canvas_options";
-import { canvas_option_defaults } from "../data/canvas_option_defaults.js";
+import * as canvas_option_defaults from "../data/canvas_option_defaults.json";
 
 /**
  * Returns configurable options with default values filled in
