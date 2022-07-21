@@ -1,6 +1,8 @@
 // types
-export type SimpleShapes = "rectangle";
-export type SimpleOptions = SimpleShapes | "dimension";
+export enum SimpleOptions {
+    RECTANGLE = "rectangle",
+    DIMENSION = "dimension"
+}
 
 // option interfaces
 /**

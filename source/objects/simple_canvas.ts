@@ -1,4 +1,4 @@
-import { SimpleDimensionOptions, SimpleRectangleOptions } from "../types/canvas_options";
+import { SimpleDimensionOptions, SimpleOptions, SimpleRectangleOptions } from "../types/canvas_options";
 import SimpleLocation from "./simple_location";
 import configurable_options from "../system/configurable_options";
 import { transform_dimension } from "../system/transform_dimension";
@@ -19,7 +19,7 @@ export default class SimpleCanvas {
     constructor(canvas_element: HTMLCanvasElement, options: SimpleDimensionOptions = {}) {
         this.canvas_element = canvas_element;
         this.canvas_context = canvas_element.getContext("2d") as CanvasRenderingContext2D;
-        const dimension_configuration = configurable_options("dimension", options);
+        const dimension_configuration = configurable_options(SimpleOptions.DIMENSION, options);
         this.canvas_dimension = dimension_configuration;
         canvas_element.width = dimension_configuration.pixels_width as number;
         canvas_element.height = dimension_configuration.pixels_height as number;
@@ -31,7 +31,7 @@ export default class SimpleCanvas {
      * @param options configurable options for rectangle
      */
     public draw_rectangle(location: SimpleLocation, options: SimpleRectangleOptions = {}): void {
-        const shape_configuration = configurable_options("rectangle", options);
+        const shape_configuration = configurable_options(SimpleOptions.RECTANGLE, options);
         let rectangle_function: Function;
         switch (shape_configuration.type) {
             case "solid":
